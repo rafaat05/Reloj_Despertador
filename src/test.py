@@ -51,4 +51,8 @@ while True:
         #si la hora coincide salimos del programa u ejecutamos
         break
 
-
+#3.Seleccion aleatoria de url en lista_url, busqueda y ejecucion de url por el navegador
+#seleccion aleatoria en la lista_url
+url_seleccionada=random.choice(lista_url)
+#apertura de la url
+webbrowser.open(url_seleccionada)
