@@ -9,6 +9,8 @@ import random
 #libreria os-> geston de sistema
 import os
 
+
+#1.Gestion de carpeta url 
 #creacion de lista_url
 lista_url=[]
 
@@ -23,7 +25,30 @@ ruta_correcta=os.path.join(direct_actual, 'url.txt')
 with open(ruta_correcta) as archivo_url:
     urls =archivo_url.readlines()
     for url in urls:
+        #.strip--> uso para aeliminar espacios y saltos de linea
         url=url.strip()
         lista_url.append(url)
     print(lista_url)
+
+#2.Gestion del tiempo
+#pedir al usuario la hora exacta que quiere que suene la alarma
+#funcion time.sleep()->pausa la ejecucion del programa
+#time.strftime()->obtiene la hora y el minuto actual(%H:%M)
+
+#Peticion de alarma al usuario
+print("Configuracion de alarma")
+alarma_usuario=input("Seleccione cuando quiere que suene la alarma: ").strip()#evita fallos por espacios
+print("Alarma programada")
+while True:
+    #variable con la hora actual
+    hora_actual=time.strftime("%H:%M")
+
+    #condicional para controlar cuando las horas coinciden
+    if hora_actual != alarma_usuario:
+        #El programa espera un segundo para evitar fallos
+        time.sleep(1)
+    else:
+        #si la hora coincide salimos del programa u ejecutamos
+        break
+
 
