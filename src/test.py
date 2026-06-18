@@ -27,4 +27,3 @@ with open(ruta_correcta) as archivo_url:
         lista_url.append(url)
     print(lista_url)
 
-
