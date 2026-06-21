@@ -52,7 +52,9 @@ while True:
         break
 
 #3.Seleccion aleatoria de url en lista_url, busqueda y ejecucion de url por el navegador
+
 #seleccion aleatoria en la lista_url
 url_seleccionada=random.choice(lista_url)
 #apertura de la url
-webbrowser.open(url_seleccionada)
+#Ejecuta el proceso de apetura directamente desde las herramientas windows
+os.system(f"powershell.exe Start-Process '{url_seleccionada}'")
