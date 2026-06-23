@@ -6,7 +6,8 @@ def gestion_url():
     lista_url=[]
 
     direct_actual=os.path.dirname(__file__)
-    ruta_correcta=os.path.join(direct_actual, 'url.txt')
+    #.. para seleccionar el directorio anterior
+    ruta_correcta=os.path.join(direct_actual, '..', 'url.txt')
 
     with open(ruta_correcta) as archivo_url:
         urls =archivo_url.readlines()
